@@ -21,6 +21,6 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 add_library(ddsp_tilde SHARED ddsp_tilde/ddsp_tilde.cpp ddsp_tilde/ddsp_model.cpp)
 target_link_libraries(ddsp_tilde PUBLIC "${TORCH_LIBRARIES}")
 set_target_properties(ddsp_tilde PROPERTIES PREFIX "" OUTPUT_NAME "ddsp~" SUFFIX "${EXTERNAL_SUFFIX}")
-set_property(TARGET ddsp_tilde PROPERTY CXX_STANDARD 14)
+set_property(TARGET ddsp_tilde PROPERTY CXX_STANDARD 17)
 
 install(TARGETS ddsp_tilde DESTINATION "${EXTERNAL_DESTINATION}")
